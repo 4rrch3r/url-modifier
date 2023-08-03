@@ -29,7 +29,7 @@ describe('AppController (e2e)', () => {
     });
   });
   describe('/url (POST)', () => {
-    it('should return 200 and short string',async()=>{
+    it('should return 201 and short string',async()=>{
       const longURL:string ='https://www.youtube.com/'
       const res = await request(app.getHttpServer()).post(`/url`).send({ url: longURL });
       expect(res.statusCode).toBe(201)
